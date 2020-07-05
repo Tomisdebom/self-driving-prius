@@ -29,7 +29,6 @@ roslaunch control_solution solution.launch gazebo_gui:=true
 ```
 
 ## License
-Tom Kerssemakers
-
+Tom Kerssemakers \
 Binnert Prins
 
