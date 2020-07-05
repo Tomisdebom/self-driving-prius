@@ -1,0 +1,29 @@
+<launch>
+	<param name = "throttle_param" type="double" value="0" />
+	<param name = "steer_param" type="double" value="0" />
+	<include file="$(find car_simulation)/launch/simulation.launch">
+		<arg name="gazebo_gui" value="false" />
+		<arg name="world_name" value="barrels.world" />
+		<arg name="rviz" value="true" />
+	</include>
+	<node
+		pkg ="opencv_solution"
+		type= "opencv_solution"
+		name = "opencv_solution"
+		output = "screen"
+	/>
+
+	<node
+		pkg ="pcl_solution"
+		type= "pcl_solution_node"
+		name = "pcl_solution_node"
+		output = "screen"
+	/>
+
+	<node
+		pkg ="control_solution"
+		type= "control_solution_node"
+		name = "control_solution_node"
+		output = "screen"
+	/>
+</launch>
